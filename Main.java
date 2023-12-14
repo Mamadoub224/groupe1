@@ -1,18 +1,17 @@
-import java.util.Locale;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] tableau = {8,9,7,6,5,33,55,66};
-        if ((tableau==null) || (tableau.length==0)){
-            System.out.println("le tableau est vide ou null aucune valeur a compare ");
+        // soit deux tableaux avec leurs initialisation
+        int[] t1={1,2,3,4,5};
+        int[] t2={6,7,8,9,10};
+        int[] t3= new int[5];
+        for(int i=0;i<5;i++){
+            int val1=(i<t1.length) ? t1[i]:0;
+            int val2=(i<t2.length) ? t2[i]:0;
+            t3[i]=val1+val2;
         }
-        int max=tableau[0];
-        for(int i=1;i<tableau.length;i++){
-            if(tableau[i]>max){
-                max=tableau[i];
-            }
-        }
-
-        System.out.println("le plus dans le tableau est  : " + "["+max+"]");
+        System.out.println(" Resultat de l'addition : "+ Arrays.toString(t3) );
     }
 }
